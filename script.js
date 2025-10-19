@@ -134,7 +134,7 @@ botaoPlayPause.addEventListener("click", tocarOuPausarFaixa);
 botaoCapituloAnterior.addEventListener("click", capituloAnterior);
 botaoProximoCapitulo.addEventListener("click", proximoCapitulo);
 
-audio.addEventListener("ended", function() {
+audio.addEventListener("ended", function () {
   proximoCapitulo.chamadoPorEnded = true;
   proximoCapitulo();
 });
