@@ -41,7 +41,7 @@ O player permite **reproduzir, pausar e navegar entre capítulos** — tudo com 
 
 ## 🌐 Acesse o projeto
 
-👉 [Clique aqui para ouvir o audiobook](https://germanavaz.github.io/audiobook/)
+👉 [Clique aqui para ouvir o audiobook](https://audiobook-sand.vercel.app/)
 
 ---
 
