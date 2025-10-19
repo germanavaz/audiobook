@@ -7,7 +7,11 @@
 body {
   font-family: "Montserrat", sans-serif;
   font-size: 1.2rem;
-  background-image: linear-gradient(to bottom, hsl(141, 75%, 15%), hsl(141, 75%, 5%));
+  background-image: linear-gradient(
+    to bottom,
+    hsl(141, 75%, 15%),
+    hsl(141, 75%, 5%)
+  );
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -79,4 +83,47 @@ button {
   display: flex;
   justify-content: center;
   gap: 10px;
-}/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */
+.barra-progresso {
+  width: 100%;
+  max-width: 400px;
+  height: 12px;
+  background: #333;
+  border-radius: 6px;
+  margin: 24px 0 0 0;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+
+.progresso-preenchido {
+  height: 100%;
+  background: linear-gradient(90deg, #4caf50, #81c784);
+  border-radius: 6px;
+  width: 0%;
+  transition: width 0.1s linear;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.tempo-restante {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 0.95rem;
+  /* background: rgba(0,0,0,0.3); */
+  padding: 0 ;
+  border-radius: 4px;
+  z-index: 2;
+  pointer-events: none;
+  font-variant-numeric: tabular-nums;
+}
