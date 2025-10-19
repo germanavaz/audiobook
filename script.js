@@ -122,10 +122,19 @@ function proximoCapitulo() {
   nomeCapitulo.innerText = "Capítulo " + capitulo;
   progressoPreenchido.style.width = "0%";
   tempoRestanteSpan.textContent = " ";
+
+  // Se chamado pelo evento 'ended', tocar automaticamente
+  if (proximoCapitulo.chamadoPorEnded) {
+    tocarFaixa();
+    proximoCapitulo.chamadoPorEnded = false;
+  }
 }
 
 botaoPlayPause.addEventListener("click", tocarOuPausarFaixa);
 botaoCapituloAnterior.addEventListener("click", capituloAnterior);
 botaoProximoCapitulo.addEventListener("click", proximoCapitulo);
 
-audio.addEventListener("ended", proximoCapitulo);
+audio.addEventListener("ended", function() {
+  proximoCapitulo.chamadoPorEnded = true;
+  proximoCapitulo();
+});
